@@ -12,6 +12,7 @@ class MainWindow(QMainWindow):
         button = QPushButton("Convert")
         button.clicked.connect(self.convertBiometricData)
 
+        openFileButton = QPushButton("Open File")
         self.fileToConvert = QFileDialog(self)
         self.setFixedSize(QSize(400,300))
 
