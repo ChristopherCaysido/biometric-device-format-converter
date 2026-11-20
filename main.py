@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from PySide6.QtCore import QSize, Qt
-from PySide6.QtWidgets import QApplication,  QMainWindow, QWidget, QPushButton, QVBoxLayout
+from PySide6.QtWidgets import QApplication,  QMainWindow, QWidget, QPushButton, QVBoxLayout, QFileDialog
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -12,6 +12,7 @@ class MainWindow(QMainWindow):
         button = QPushButton("Convert")
         button.clicked.connect(self.convertBiometricData)
 
+        self.fileToConvert = QFileDialog(self)
         self.setFixedSize(QSize(400,300))
 
         self.setCentralWidget(button)
