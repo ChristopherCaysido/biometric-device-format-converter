@@ -9,12 +9,16 @@ class MainWindow(QMainWindow):
         
         self.setWindowTitle("Python Biometric Converter")
 
-        button = QPushButton("Test Button")
+        button = QPushButton("Convert")
+        button.clicked.connect(self.convertBiometricData)
 
         self.setFixedSize(QSize(400,300))
 
         self.setCentralWidget(button)
+    def convertBiometricData():
+        print('Converted Data')
 
+    
 
 app = QApplication(sys.argv)
 
