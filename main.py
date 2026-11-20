@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
         self.setFixedSize(QSize(400,300))
 
         self.setCentralWidget(button)
-    def convertBiometricData():
+    def convertBiometricData(self):
         print('Converted Data')
 
     
